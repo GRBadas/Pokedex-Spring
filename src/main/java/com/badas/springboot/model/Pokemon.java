@@ -7,7 +7,8 @@ import lombok.Data;
 import lombok.ToString;
 
 @Document
-@Data @ToString
+@ToString
+@Data
 public class Pokemon {
 	
 	@Id
@@ -20,5 +21,13 @@ public class Pokemon {
 	private String habilidade;
 	
 	private Double peso;
+	
+	 public Pokemon(String id, String nome, String categoria, String habilidades, Double peso) {
+	        this.id = id;
+	        this.nome = nome;
+	        this.categoria = categoria;
+	        this.habilidade = habilidades;
+	        this.peso = peso;
+	    }
 
 }
